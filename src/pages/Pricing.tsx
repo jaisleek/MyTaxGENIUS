@@ -75,7 +75,7 @@ export default function Pricing() {
           Simple, transparent pricing
         </h1>
         <p className="mt-4 text-xl text-gray-500 max-w-2xl mx-auto">
-          Start for free, then upgrade to let NaijaTax AI or our verified human accountants file for you.
+          Start for free, then upgrade to let MyTaxGENIUS or our verified human accountants file for you.
         </p>
       </div>
 
@@ -160,7 +160,7 @@ export default function Pricing() {
                 <span className="text-white/80 text-sm font-medium">TEST MODE</span>
                 <div className="text-white opacity-80 text-sm mt-2">{selectedPlan.name} Plan</div>
                 <div className="text-4xl font-extrabold mt-1">{selectedPlan.price}</div>
-                <div className="text-white/80 text-sm mt-1">naijatax-ai@example.com</div>
+                <div className="text-white/80 text-sm mt-1">MyTaxGENIUS-ai@example.com</div>
               </div>
             </div>
 

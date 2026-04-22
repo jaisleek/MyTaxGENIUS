@@ -210,7 +210,7 @@ export default function Home() {
                 <MessageSquare className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="font-extrabold text-xl lg:text-2xl text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 transition-colors">Ask NaijaTax AI</h3>
+                <h3 className="font-extrabold text-xl lg:text-2xl text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 transition-colors">Ask MyTaxGENIUS</h3>
                 <p className="text-slate-500 dark:text-slate-400 font-medium text-sm lg:text-[15px] leading-relaxed">Chat with our intelligent bot. Get simple answers in Pidgin, Yoruba, Hausa or Igbo instantly.</p>
               </div>
             </Link>
@@ -379,14 +379,14 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* NaijaTax Bridge */}
+            {/* MyTaxGENIUS Bridge */}
             <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-[2rem] p-8 border border-emerald-200 dark:border-emerald-800 shadow-[0_8px_30px_rgb(16,185,129,0.1)] relative">
               <div className="absolute -top-4 -right-4 bg-emerald-500 text-white font-black text-xs px-4 py-2 rounded-full shadow-lg transform rotate-6">
                 WORLD CLASS PARTNER
               </div>
               <h3 className="text-xl font-bold text-emerald-900 dark:text-emerald-400 mb-6 flex items-center">
                 <CheckCircle className="w-8 h-8 text-emerald-500 dark:text-emerald-400 mr-3" />
-                NaijaTax Technology Bridge
+                MyTaxGENIUS Technology Bridge
               </h3>
               <ul className="space-y-5">
                 <li className="flex items-start">
@@ -422,7 +422,7 @@ export default function Home() {
           <div className="space-y-6">
             {[
               {
-                q: "Does NaijaTax AI submit my tax directly to NRS?",
+                q: "Does MyTaxGENIUS submit my tax directly to NRS?",
                 a: "Yes. For users on our compliant plan, we utilize secure NRS endpoint linkages to ensure your PIT, CIT, and VAT returns are logged directly into the government's tax database legally and officially."
               },
               {

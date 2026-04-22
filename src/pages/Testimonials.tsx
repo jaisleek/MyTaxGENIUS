@@ -8,7 +8,7 @@ export default function Testimonials() {
     {
       name: "Tunde Afolabi",
       role: "SME Owner, Lagos",
-      testimony: "Before NaijaTax AI, I used to pay agents ridiculous amounts just to calculate my VAT. The AI correctly identified my exemptions and registered me for my TIN in less than a day. Highly trustworthy!",
+      testimony: "Before MyTaxGENIUS, I used to pay agents ridiculous amounts just to calculate my VAT. The AI correctly identified my exemptions and registered me for my TIN in less than a day. Highly trustworthy!",
       rating: 5,
       image: "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=150&h=150&fit=crop&crop=faces"
     },
@@ -114,7 +114,7 @@ export default function Testimonials() {
               </div>
               <div>
                 <label className="block text-sm font-bold text-slate-700 mb-1">Your Testimony</label>
-                <textarea required rows={4} className="w-full border border-slate-200 rounded-xl p-3 focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="Tell us how NaijaTax AI helped..."></textarea>
+                <textarea required rows={4} className="w-full border border-slate-200 rounded-xl p-3 focus:ring-2 focus:ring-emerald-500 outline-none" placeholder="Tell us how MyTaxGENIUS helped..."></textarea>
               </div>
               <button className="w-full bg-emerald-600 text-white font-extrabold py-4 rounded-xl hover:bg-emerald-700 transition-colors">
                 Submit securely

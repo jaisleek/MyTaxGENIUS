@@ -61,7 +61,7 @@ export default function SmeOnboarding() {
             <h4 className="font-bold text-slate-900 mb-3 flex items-center"><ShieldCheck className="w-5 h-5 text-emerald-500 mr-2"/> Next Steps</h4>
             <ul className="space-y-3 text-slate-600 text-sm font-medium">
               <li>1. Accountant reviews your business volume ({formData.monthlyRevenue}/mo).</li>
-              <li>2. We generate your secure NaijaTax AI Dashboard invite.</li>
+              <li>2. We generate your secure MyTaxGENIUS Dashboard invite.</li>
               <li>3. You never worry about NRS deadlines again.</li>
             </ul>
           </div>
@@ -87,7 +87,7 @@ export default function SmeOnboarding() {
 
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold mb-6 uppercase tracking-wider text-xs shadow-sm">
-            <TrendingUp className="w-4 h-4 mr-2" /> NaijaTax Premium for Business
+            <TrendingUp className="w-4 h-4 mr-2" /> MyTaxGENIUS Premium for Business
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
             Hire a Dedicated Tax Accountant. <br className="hidden md:block"/>

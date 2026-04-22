@@ -222,7 +222,7 @@ export default function TaxReforms() {
             <ShieldCheck className="w-16 h-16 text-emerald-200 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Your All-In-One Compliance Solution</h2>
             <p className="text-emerald-100 text-lg max-w-2xl mx-auto mb-8">
-              Don't navigate the reforms alone. NaijaTax AI brings your tax records, returns, exemptions, and government linkage into one automated portal.
+              Don't navigate the reforms alone. MyTaxGENIUS brings your tax records, returns, exemptions, and government linkage into one automated portal.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <Link to="/chat" className="w-full sm:w-auto bg-white text-emerald-700 font-extrabold px-8 py-4 rounded-xl hover:bg-emerald-50 transition-colors">

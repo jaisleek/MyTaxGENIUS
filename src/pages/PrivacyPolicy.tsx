@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
             </h2>
           </div>
           <p className="text-slate-600 leading-relaxed">
-            NaijaTax AI is structurally bound by the provisions of the <strong>Nigeria Data Protection Act (NDPA) 2023</strong> and the foundational NDPR. We act strictly as a Data Processor and Controller in capacities strictly outlined by Nigerian Constitutional Law. Any personal, financial, and corporate data submitted (including BVN, NIN, RC Numbers, and Turnover figures) is structurally partitioned and processed strictly with your explicit consent.
+            MyTaxGENIUS is structurally bound by the provisions of the <strong>Nigeria Data Protection Act (NDPA) 2023</strong> and the foundational NDPR. We act strictly as a Data Processor and Controller in capacities strictly outlined by Nigerian Constitutional Law. Any personal, financial, and corporate data submitted (including BVN, NIN, RC Numbers, and Turnover figures) is structurally partitioned and processed strictly with your explicit consent.
           </p>
         </section>
 
@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
             </h2>
           </div>
           <p className="text-slate-600 leading-relaxed mb-4">
-            To ensure zero vulnerability to hacker threats and third-party intrusions, NaijaTax AI deploys a <strong>Zero-Trust Architecture</strong>.
+            To ensure zero vulnerability to hacker threats and third-party intrusions, MyTaxGENIUS deploys a <strong>Zero-Trust Architecture</strong>.
           </p>
           <div className="grid sm:grid-cols-2 gap-4 mt-4">
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
@@ -76,10 +76,10 @@ export default function PrivacyPolicy() {
           </div>
           <div className="bg-amber-50/50 p-5 rounded-2xl border border-amber-100 text-slate-700 leading-relaxed text-sm">
             <p className="mb-3">
-              <strong>EXPRESS WAIVER OF LIABILITY:</strong> By utilizing the NaijaTax AI platform to transmit financial or identity data, the User explicitly acknowledges that while the platform utilizes state-of-the-art security, 100% security against highly advanced nation-state or quantum exploits cannot be legally guaranteed across the global internet infrastructure.
+              <strong>EXPRESS WAIVER OF LIABILITY:</strong> By utilizing the MyTaxGENIUS platform to transmit financial or identity data, the User explicitly acknowledges that while the platform utilizes state-of-the-art security, 100% security against highly advanced nation-state or quantum exploits cannot be legally guaranteed across the global internet infrastructure.
             </p>
             <p>
-              In strict accordance with global SaaS jurisprudence and Nigerian digital law, NaijaTax AI, its operators, directors, and technical partners <strong>shall not be held legally or financially liable</strong> for any unauthorized access, breach, leakage, or loss of data caused by third-party infrastructure failures, user device compromise, or sophisticated adversarial attacks beyond standard preventative technological limits. <strong>Users waive all rights to corporate lawsuits, class-action litigation, or claims of damages regarding data compromise.</strong>
+              In strict accordance with global SaaS jurisprudence and Nigerian digital law, MyTaxGENIUS, its operators, directors, and technical partners <strong>shall not be held legally or financially liable</strong> for any unauthorized access, breach, leakage, or loss of data caused by third-party infrastructure failures, user device compromise, or sophisticated adversarial attacks beyond standard preventative technological limits. <strong>Users waive all rights to corporate lawsuits, class-action litigation, or claims of damages regarding data compromise.</strong>
             </p>
           </div>
         </section>
@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
             <p className="text-sm font-bold text-emerald-400 mb-1">NRS / NDPA Data Protection Officer</p>
             <p className="text-sm text-slate-400">For legal audits or NDPA compliance requests:</p>
           </div>
-          <a href="mailto:dpo@naijatax.ai" className="mt-4 sm:mt-0 bg-white text-slate-900 px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-emerald-50 transition-colors">
+          <a href="mailto:dpo@MyTaxGENIUS.ai" className="mt-4 sm:mt-0 bg-white text-slate-900 px-6 py-2.5 rounded-xl font-bold text-sm hover:bg-emerald-50 transition-colors">
             Contact DPO
           </a>
         </div>

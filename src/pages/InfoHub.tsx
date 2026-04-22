@@ -26,7 +26,7 @@ export default function InfoHub() {
             <div>
               <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-2">Seamless NRS Integration</h2>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
-                NaijaTax AI acts as an officially aligned, authorized digital gateway for the Nigeria Revenue Service (NRS). This means our platform connects directly to the Joint Tax Board (JTB) systems.
+                MyTaxGENIUS acts as an officially aligned, authorized digital gateway for the Nigeria Revenue Service (NRS). This means our platform connects directly to the Joint Tax Board (JTB) systems.
               </p>
             </div>
           </div>

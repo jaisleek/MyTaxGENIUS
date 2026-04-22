@@ -228,7 +228,7 @@ export default function TaxFiling() {
                 className="mt-1 h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500"
               />
               <label htmlFor="consent" className="ml-3 text-sm text-gray-600">
-                I declare that the information provided is true and complete. I consent to NaijaTax AI securely transmitting this data to the Nigeria Revenue Service (NRS) via encrypted protocols in compliance with the NDPR.
+                I declare that the information provided is true and complete. I consent to MyTaxGENIUS AI securely transmitting this data to the Nigeria Revenue Service (NRS) via encrypted protocols in compliance with the NDPR.
               </label>
             </div>
 

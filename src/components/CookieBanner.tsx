@@ -33,7 +33,7 @@ export default function CookieBanner() {
                 Nigeria Data Protection Act (NDPA) 2023 Compliance
               </p>
               <p className="text-slate-400 text-xs leading-relaxed max-w-3xl">
-                We use secure, strictly necessary cookies to protect your session and ensure bank-level encryption (AES-256) while using our portal. By exploring NaijaTax AI, you consent to our Zero-Trust security architecture. <Link to="/privacy" className="text-emerald-400 hover:text-emerald-300 underline">Read our robust Security Policy here.</Link>
+                We use secure, strictly necessary cookies to protect your session and ensure bank-level encryption (AES-256) while using our portal. By exploring MyTaxGENIUS, you consent to our Zero-Trust security architecture. <Link to="/privacy" className="text-emerald-400 hover:text-emerald-300 underline">Read our robust Security Policy here.</Link>
               </p>
             </div>
           </div>

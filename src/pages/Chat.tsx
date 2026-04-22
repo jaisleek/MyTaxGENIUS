@@ -10,23 +10,23 @@ const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const TRANSLATIONS = {
   English: {
-    welcome: "Hello! I am the **NaijaTax AI Assistant**. I can help you understand Nigerian tax, explain how to get a TIN, or guide you. How can I help you today?",
+    welcome: "Hello! I am the **MyTaxGENIUS Assistant**. I can help you understand Nigerian tax, explain how to get a TIN, or guide you. How can I help you today?",
     prompts: ["What is a TIN?", "How do I pay Market Tax?", "Calculate my PAYE", "What is VAT?"]
   },
   Pidgin: {
-    welcome: "Howfa! I be **NaijaTax AI Assistant**. I fit help you understand tax, explain how to get TIN, or guide you. Wetin I fit do for you today?",
+    welcome: "Howfa! I be **MyTaxGENIUS Assistant**. I fit help you understand tax, explain how to get TIN, or guide you. Wetin I fit do for you today?",
     prompts: ["Wetin be TIN?", "How I go pay Market Tax?", "Calculate my PAYE", "Wetin be VAT?"]
   },
   Yoruba: {
-    welcome: "Bawo ni! Emi ni **Oluranlowo NaijaTax AI**. Mo le ran e lowo lati ni oye ori (tax), bawo ni o se le gba TIN, tabi fun e ni itosona. Bawo ni mo se le ran e lowo loni?",
+    welcome: "Bawo ni! Emi ni **Oluranlowo MyTaxGENIUS **. Mo le ran e lowo lati ni oye ori (tax), bawo ni o se le gba TIN, tabi fun e ni itosona. Bawo ni mo se le ran e lowo loni?",
     prompts: ["Kini TIN?", "Bawo ni mo san owo ori oja?", "Se isiro PAYE mi", "Kini VAT?"]
   },
   Hausa: {
-    welcome: "Sannu! Ni ne **Mataimakin NaijaTax AI**. Zan iya taimaka muku gane haraji (tax), yadda za ku sami TIN, ko in yi muku jagora. Yaya zan iya taimaka muku a yau?",
+    welcome: "Sannu! Ni ne **Mataimakin MyTaxGENIUS **. Zan iya taimaka muku gane haraji (tax), yadda za ku sami TIN, ko in yi muku jagora. Yaya zan iya taimaka muku a yau?",
     prompts: ["Menene TIN?", "Yaya zan biya harajin kasuwa?", "Yi lissafin PAYE na", "Menene VAT?"]
   },
   Igbo: {
-    welcome: "Nnoo! Abum **onye enyemaka NaijaTax AI**. Enwere m ike inyere gị aka ịghọta ụtụ isi (tax), kọwaa otu ị ga-esi nweta TIN, ma ọ bụ duzie gị. Kedu otu m ga-esi nyere gị aka taa?",
+    welcome: "Nnoo! Abum **onye enyemaka MyTaxGENIUS **. Enwere m ike inyere gị aka ịghọta ụtụ isi (tax), kọwaa otu ị ga-esi nweta TIN, ma ọ bụ duzie gị. Kedu otu m ga-esi nyere gị aka taa?",
     prompts: ["Kedu ihe bụ TIN?", "Kedu ka m ga-esi kwụọ ụtụ ahịa?", "Gbakọọ PAYE m", "Kedu ihe bụ VAT?"]
   }
 };

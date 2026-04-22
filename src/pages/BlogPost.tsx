@@ -29,7 +29,7 @@ export default function BlogPost() {
               <div className="flex flex-wrap items-center text-sm text-gray-500 font-medium gap-4 border-b border-gray-100 pb-8">
                 <span className="flex items-center"><Calendar className="w-4 h-4 mr-1.5" /> April 16, 2026</span>
                 <span className="flex items-center"><Clock className="w-4 h-4 mr-1.5" /> 6 min read</span>
-                <span className="flex items-center font-bold text-green-700"><ShieldCheck className="w-4 h-4 mr-1.5" /> Verified by NaijaTax AI Experts</span>
+                <span className="flex items-center font-bold text-green-700"><ShieldCheck className="w-4 h-4 mr-1.5" /> Verified by MyTaxGENIUS Experts</span>
               </div>
             </div>
 
@@ -75,9 +75,9 @@ export default function BlogPost() {
               
               <div className="text-center bg-gray-50 p-8 rounded-2xl">
                 <h4 className="text-xl font-extrabold text-gray-900 mb-3">Does your business qualify for the new exemptions?</h4>
-                <p className="text-gray-600 mb-6">Our AI Assistant has been updated with these exact policies. Ask NaijaTax AI right now.</p>
+                <p className="text-gray-600 mb-6">Our AI Assistant has been updated with these exact policies. Ask MyTaxGENIUS right now.</p>
                 <Link to="/chat" className="inline-block bg-green-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:bg-green-800 transition-colors">
-                  Ask NaijaTax AI Now
+                  Ask MyTaxGENIUS Now
                 </Link>
               </div>
             </div>

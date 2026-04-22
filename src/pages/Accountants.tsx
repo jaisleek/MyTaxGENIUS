@@ -37,7 +37,7 @@ export default function Accountants() {
         </div>
         <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Application Received!</h2>
         <p className="text-xl text-gray-600 mb-8 max-w-xl mx-auto">
-          Thank you for applying to join the NaijaTax AI network. Our compliance team will securely verify your CITN registration and reach out via email within 48 hours for the next onboarding steps.
+          Thank you for applying to join the MyTaxGENIUS network. Our compliance team will securely verify your CITN registration and reach out via email within 48 hours for the next onboarding steps.
         </p>
         <button 
           onClick={() => setStatus('idle')}
@@ -58,7 +58,7 @@ export default function Accountants() {
             <Briefcase className="w-4 h-4 mr-2" /> Partner Network
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-            Become a Certified NaijaTax AI Accountant.
+            Become a Certified MyTaxGENIUS Accountant.
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Our automated tools handle the small traders. For growing SMEs, our premium feature matches them directly with certified CITN professionals like you.
@@ -88,7 +88,7 @@ export default function Accountants() {
               <Clock className="w-7 h-7" />
             </div>
             <h3 className="font-extrabold text-gray-900 dark:text-white text-lg mb-2">Work Anywhere</h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">Log in alongside the NaijaTax AI assistant. Review corporate taxes remotely from your phone or laptop.</p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">Log in alongside the MyTaxGENIUS assistant. Review corporate taxes remotely from your phone or laptop.</p>
           </div>
         </div>
       </section>
@@ -196,7 +196,7 @@ export default function Accountants() {
                 className="mt-1 h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               <label htmlFor="consent" className="ml-3 text-sm text-gray-700 font-medium">
-                I certify that the professional details provided above are authentic. I consent to NaijaTax AI storing and verifying my data under the NDPR policy for onboarding purposes.
+                I certify that the professional details provided above are authentic. I consent to MyTaxGENIUS storing and verifying my data under the NDPR policy for onboarding purposes.
               </label>
             </div>
 
