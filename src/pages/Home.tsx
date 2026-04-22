@@ -1,30 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { ShieldCheck, ArrowRight, CheckCircle, Calculator as CalculatorIcon, Building2, UserCircle, Briefcase, Zap, Fingerprint, Lock, FileText, MessageSquare, Receipt, HelpCircle, BookOpen, Rocket } from 'lucide-react';
+import { ShieldCheck, ArrowRight, CheckCircle, Calculator as CalculatorIcon, Building2, UserCircle, Briefcase, Zap, Fingerprint, Lock, FileText, MessageSquare, Receipt, HelpCircle, BookOpen, Rocket, Smartphone, Play, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 
 function cn(...inputs: (string | undefined | null | false)[]) {
   return twMerge(clsx(inputs));
 }
 
-// Ensure the URLs are 100% accessible via GET with no strict referer restrictions
-const backgroundVideos = [
-  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
-  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-];
-
 export default function Home() {
   const [calcSalary, setCalcSalary] = useState<number | ''>('');
-  const [videoIndex, setVideoIndex] = useState(0);
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVideoIndex((prev) => (prev + 1) % backgroundVideos.length);
-    }, 10000); // Change video every 10 seconds
-    return () => clearInterval(interval);
-  }, []);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   // Basic static PAYE estimation calculation for the "sticky" preview
   const estimatedTax = typeof calcSalary === 'number' ? (calcSalary * 0.05).toFixed(0) : '0';
@@ -35,25 +22,13 @@ export default function Home() {
       
       {/* 🚀 SUPERCHARGED HERO SECTION (Fintech Premium Vibe) */}
       <section className="relative overflow-hidden bg-[#0F172A] pt-20 pb-28 md:pt-32 md:pb-40">
-        {/* AI Tax Data Video Carousel Background */}
-        <div className="absolute inset-0 z-0 overflow-hidden bg-[#0F172A]">
-          {backgroundVideos.map((src, index) => (
-            <video 
-              key={src}
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
-              className={cn(
-                "absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000",
-                videoIndex === index ? "opacity-40" : "opacity-0"
-              )}
-            >
-              <source src={src} type="video/mp4" />
-            </video>
-          ))}
-          {/* Gradient Overlay (No blur, to keep video sharp and visible) */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0F172A]/80 via-[#0F172A]/40 to-[#0F172A] z-10 pointer-events-none"></div>
+        
+        {/* Animated Grid & Glow Background */}
+        <div className="absolute inset-0 z-0 bg-[#0F172A]">
+          {/* subtle animated grid */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+          {/* radial gradient overlay to fade edges */}
+          <div className="absolute inset-0 bg-[#0F172A] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30"></div>
         </div>
 
         {/* Abstract Glowing Backgrounds */}
@@ -89,7 +64,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg lg:text-xl text-slate-300 font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                NaijaTax AI decodes the new 2026 NRS tax reforms for you. We protect your everyday finances, shield you from multiple taxes, and automate your compliance instantly.
+                MyTaxGenius AI decodes the new 2026 NRS tax reforms for you. We protect your everyday finances, shield you from multiple taxes, and automate your compliance instantly.
               </p>
               
               <motion.div 
@@ -101,9 +76,9 @@ export default function Home() {
                 <Link to="/reforms" className="w-full sm:w-auto bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center hover:from-fuchsia-500 hover:to-purple-500 hover:-translate-y-1 transition-all duration-300 shadow-[0_8px_30px_rgba(192,38,211,0.3)] border border-fuchsia-400/30">
                   Explore 2026 Reforms <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link to="/tin" className="w-full sm:w-auto bg-white/5 text-slate-300 border border-white/10 px-8 py-4 rounded-2xl font-bold flex items-center justify-center hover:bg-white/10 transition-colors backdrop-blur-md">
-                  Get Free TIN
-                </Link>
+                <button onClick={() => setIsVideoModalOpen(true)} className="w-full sm:w-auto bg-white/5 text-slate-300 border border-white/10 px-8 py-4 rounded-2xl font-bold flex items-center justify-center hover:bg-white/10 hover:text-white transition-all duration-300 backdrop-blur-md">
+                  <Play className="w-5 h-5 ml-2 mr-2 fill-current" /> Watch Video
+                </button>
               </motion.div>
 
               <motion.div 
@@ -210,7 +185,7 @@ export default function Home() {
                 <MessageSquare className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="font-extrabold text-xl lg:text-2xl text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 transition-colors">Ask MyTaxGENIUS</h3>
+                <h3 className="font-extrabold text-xl lg:text-2xl text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 transition-colors">Ask MyTaxGenius AI</h3>
                 <p className="text-slate-500 dark:text-slate-400 font-medium text-sm lg:text-[15px] leading-relaxed">Chat with our intelligent bot. Get simple answers in Pidgin, Yoruba, Hausa or Igbo instantly.</p>
               </div>
             </Link>
@@ -268,6 +243,41 @@ export default function Home() {
                 <p className="text-slate-500 dark:text-slate-400 font-medium text-sm lg:text-[15px] leading-relaxed">Read structured guides on CIT, PAYE, VAT, and NDPR protocols. Understand your tax rights.</p>
               </div>
             </Link>
+          </motion.div>
+
+          {/* WhatsApp Bot Full-Width Banner */}
+          <motion.div className="md:col-span-2 lg:col-span-3" variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } } }}>
+            <div className="relative overflow-hidden group bg-gradient-to-r from-[#075E54] via-[#128C7E] to-[#25D366] rounded-[2rem] p-8 md:p-12 shadow-[0_20px_50px_rgba(37,211,102,0.3)] flex flex-col md:flex-row items-center justify-between border border-[#25D366]/50 transition-transform hover:-translate-y-1 duration-300">
+              
+              {/* Decorative Background Elements */}
+              <div className="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-colors duration-700"></div>
+              <div className="absolute bottom-0 left-10 w-32 h-32 bg-black/10 rounded-full blur-2xl"></div>
+
+              <div className="relative z-10 flex-1 md:pr-8 text-center md:text-left mb-8 md:mb-0">
+                <div className="inline-flex items-center bg-white text-[#128C7E] px-4 py-1.5 rounded-full font-black text-xs sm:text-sm uppercase tracking-widest mb-6 shadow-lg animate-bounce mt-2 md:mt-0">
+                  <Smartphone className="w-4 h-4 mr-2" />
+                  Coming Soon
+                </div>
+                <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-4 leading-tight tracking-tight">
+                  MyTaxGenius on <span className="text-green-100 underline decoration-green-300/50 underline-offset-4">WhatsApp</span>
+                </h3>
+                <p className="text-green-50 text-base md:text-lg lg:text-xl font-medium max-w-2xl leading-relaxed mx-auto md:mx-0">
+                  We are bringing Africa's smartest tax AI straight to your pocket. Soon, you'll be able to chat, file returns, calculate NDPR-compliant deductions, and get instant answers exactly where you already message your friends!
+                </p>
+              </div>
+
+              <div className="relative z-10 flex-shrink-0 flex justify-center">
+                <div className="w-32 h-32 md:w-40 md:h-40 bg-white/10 backdrop-blur-md rounded-full border-4 border-white/30 flex items-center justify-center shadow-2xl relative">
+                  {/* Pulse effect */}
+                  <div className="absolute inset-0 rounded-full bg-white/20 animate-ping"></div>
+                  <MessageSquare className="w-16 h-16 md:w-20 md:h-20 text-white fill-white relative z-10 group-hover:scale-110 transition-transform duration-300" />
+                  {/* A little whatsapp-like tail */}
+                  <div className="absolute -bottom-2 -left-2 w-12 h-12 bg-white backdrop-blur-md border border-white/30 shadow-lg rounded-full flex items-center justify-center">
+                    <Smartphone className="w-6 h-6 text-[#128C7E]" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </section>
@@ -379,14 +389,14 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* MyTaxGENIUS Bridge */}
+            {/* MyTaxGenius Bridge */}
             <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-[2rem] p-8 border border-emerald-200 dark:border-emerald-800 shadow-[0_8px_30px_rgb(16,185,129,0.1)] relative">
               <div className="absolute -top-4 -right-4 bg-emerald-500 text-white font-black text-xs px-4 py-2 rounded-full shadow-lg transform rotate-6">
                 WORLD CLASS PARTNER
               </div>
               <h3 className="text-xl font-bold text-emerald-900 dark:text-emerald-400 mb-6 flex items-center">
                 <CheckCircle className="w-8 h-8 text-emerald-500 dark:text-emerald-400 mr-3" />
-                MyTaxGENIUS Technology Bridge
+                MyTaxGenius Technology Bridge
               </h3>
               <ul className="space-y-5">
                 <li className="flex items-start">
@@ -422,7 +432,7 @@ export default function Home() {
           <div className="space-y-6">
             {[
               {
-                q: "Does MyTaxGENIUS submit my tax directly to NRS?",
+                q: "Does MyTaxGenius AI submit my tax directly to NRS?",
                 a: "Yes. For users on our compliant plan, we utilize secure NRS endpoint linkages to ensure your PIT, CIT, and VAT returns are logged directly into the government's tax database legally and officially."
               },
               {
@@ -431,7 +441,7 @@ export default function Home() {
               },
               {
                 q: "I run a small shop. Do I still need to pay tax?",
-                a: "Yes, but there is good news! The new tax reforms introduce simple Presumptive Taxes for small shops, and exempt them from complicated withholding taxes. NaijaTax AI calculates exactly the small amount you need to pay, so no 'area boys' can extort you."
+                a: "Yes, but there is good news! The new tax reforms introduce simple Presumptive Taxes for small shops, and exempt them from complicated withholding taxes. MyTaxGenius AI calculates exactly the small amount you need to pay, so no 'area boys' can extort you."
               },
               {
                 q: "Do I still need an accountant?",
@@ -463,6 +473,47 @@ export default function Home() {
           View SME Pricing
         </Link>
       </section>
+      {/* Video Modal Overlay */}
+      <AnimatePresence>
+        {isVideoModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+              onClick={() => setIsVideoModalOpen(false)}
+            />
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              className="relative w-full max-w-4xl bg-slate-900 rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(16,185,129,0.2)] border border-slate-800 z-10"
+            >
+              <div className="absolute top-4 right-4 z-20">
+                <button 
+                  onClick={() => setIsVideoModalOpen(false)}
+                  className="w-10 h-10 bg-black/50 hover:bg-emerald-500 text-white rounded-full flex items-center justify-center transition-colors backdrop-blur-md"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <div className="aspect-video w-full bg-[#050B14] flex flex-col items-center justify-center p-8 text-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-900/20 via-[#050B14] to-[#050B14]"></div>
+                
+                <Play className="w-20 h-20 text-emerald-500 mb-6 opacity-80 relative z-10" strokeWidth={1} />
+                <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-3 relative z-10">AI Tax Platform Overview</h3>
+                <p className="text-slate-400 max-w-lg mb-8 relative z-10 font-medium leading-relaxed">
+                  Upload your explanatory AI video to YouTube or Vimeo, then embed the link right here!
+                </p>
+                <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl max-w-xl w-full p-4 relative z-10 text-left overflow-x-auto text-emerald-400 font-mono text-xs">
+                  {`<iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>`}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
